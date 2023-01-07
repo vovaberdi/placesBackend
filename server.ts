@@ -30,21 +30,21 @@ dal_mysql.execute(createVicationFollowers);
 server.use(expressRateLimit({ windowMs: 1000, max: 30, message:"Are you fucking around?"}));
 // server.use(helmet());
 
-server.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*")
-    res.header(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested, Content-Type, Accept authorization"
-    )
-    if (req.method === "OPTIONS") {
-      res.header(
-        "Access-Control-Allow-Methods",
-        "POST, PUT, PATCH, GET, DELETE"
-      )
-      return res.status(200).json({})
-    }
-    next()
-  })
+// server.use((req, res, next) => {
+//     res.header("Access-Control-Allow-Origin", "*")
+//     res.header(
+//       "Access-Control-Allow-Headers",
+//       "Origin, X-Requested, Content-Type, Accept authorization"
+//     )
+//     if (req.method === "OPTIONS") {
+//       res.header(
+//         "Access-Control-Allow-Methods",
+//         "POST, PUT, PATCH, GET, DELETE"
+//       )
+//       return res.status(200).json({})
+//     }
+//     next()
+//   })
 
 // server.use((req, res, next) => {
 //     res.header('Access-Control-Allow-Origin', '*');
@@ -53,11 +53,11 @@ server.use((req, res, next) => {
 //     next();
 //   });
 
-// server.use(cors({
-//     "exposedHeaders" : "authorization",
-//     "origin": "*",
-//     "methods": 'GET,POST,PUT,DELETE',
-// }));
+server.use(cors({
+    "exposedHeaders" : "authorization",
+    "origin": "*",
+    "methods": 'GET,POST,PUT,DELETE',
+}));
 // server.use(cors({
 //    origin: 'https://enchanting-croissant-483ce8.netlify.app',
 //    methods: ['GET', 'POST', 'PUT', 'DELETE'],
