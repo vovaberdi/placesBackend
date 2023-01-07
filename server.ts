@@ -55,8 +55,9 @@ server.use(expressRateLimit({ windowMs: 1000, max: 30, message:"Are you fucking 
 
 server.use(cors({
     "exposedHeaders" : "authorization",
-    "origin": "*",
+    "origin": "https://enchanting-croissant-483ce8.netlify.app",
     "methods": 'GET,POST,PUT,DELETE',
+    "credentials":true
 }));
 // server.use(cors({
 //    origin: 'https://enchanting-croissant-483ce8.netlify.app',
@@ -88,6 +89,7 @@ server.use("/user",router);
 server.use("/vication",routerVication);
 server.use("/vicationLike",routerLikes);
 server.use("*", ErrorHandler);
+
 
 server.listen(process.env.PORT || PORT, () => {
     console.log(`server runing on port ${PORT}`);
