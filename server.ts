@@ -31,7 +31,6 @@ server.use(expressRateLimit({ windowMs: 1000, max: 30, message:"Are you fucking 
 // server.use(helmet());
 
 server.use(cors({
-    "exposedHeaders" : "authorization",
     "origin": "https://enchanting-croissant-483ce8.netlify.app",
     "methods": 'GET,POST,PUT,DELETE',
 }));
