@@ -30,16 +30,16 @@ dal_mysql.execute(createVicationFollowers);
 server.use(expressRateLimit({ windowMs: 1000, max: 30, message:"Are you fucking around?"}));
 // server.use(helmet());
 
-// server.use(cors({
-//     "exposedHeaders" : "authorization",
-//     "origin": "https://enchanting-croissant-483ce8.netlify.app",
-//     "methods": 'GET,POST,PUT,DELETE',
-// }));
 server.use(cors({
-   origin: 'https://enchanting-croissant-483ce8.netlify.app',
-   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-   allowedHeaders: ['Content-Type', 'authorization']
- }));
+    "exposedHeaders" : "authorization",
+    "origin": "*",
+    "methods": 'GET,POST,PUT,DELETE',
+}));
+// server.use(cors({
+//    origin: 'https://enchanting-croissant-483ce8.netlify.app',
+//    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//    allowedHeaders: ['Content-Type', 'authorization']
+//  }));
 
 
 server.use(fileUpload());
