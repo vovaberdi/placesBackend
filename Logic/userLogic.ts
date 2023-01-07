@@ -15,10 +15,10 @@ const addUser = async (user:User): Promise<string> => {
     // const errors = user.validatePost();
     // if (errors) throw new ClientError(400, errors);
 
-    // const isTaken = await isUsernameTaken(user.user_name);
-    // if (isTaken) {
-    //     throw new ClientError(400, `Username ${user.user_name} already taken`);
-    // }
+    const isTaken = await isUsernameTaken(user.user_name);
+    if (isTaken) {
+        throw new ClientError(400, `Username ${user.user_name} already taken`);
+    }
 
     user.password = crypto_helper.hash(user.password);
     user.id_ = uuid();
