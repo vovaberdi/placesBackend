@@ -33,7 +33,7 @@ server.use(expressRateLimit({ windowMs: 1000, max: 30, message:"Are you fucking 
 server.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, authorization');
+    res.header('Access-Control-Allow-Headers', '*');
     next();
   });
 
