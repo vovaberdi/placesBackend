@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest --coverage",
     "server": "nodemon --exec ts-node server.ts",
-    "start": "server start"
+    "start": "node server.ts"
   },
   "keywords": [],
   "author": "",
