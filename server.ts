@@ -14,7 +14,7 @@ const expressRateLimit = require("express-rate-limit");
 // import authRouter from "./Routes/auth";
 
 
-
+const PORT = 3001;
 
 const server = express();
 
@@ -62,7 +62,7 @@ server.use("/vication",routerVication);
 server.use("/vicationLike",routerLikes);
 server.use("*", ErrorHandler);
 
-// server.listen(process.env.PORT || 3001, function(){
-//     console.log("Express server listening on port %d in %s mode", this.address().port. server.settings.env);
-// })
-server.listen(currentPort, () => {console.log(`listening on http://localhost:${currentPort}`)} )
+server.listen(process.env.PORT || PORT, () => {
+    console.log(`server runing on port ${PORT}`);
+});
+// server.listen(currentPort, () => {console.log(`listening on http://localhost:${currentPort}`)} )
