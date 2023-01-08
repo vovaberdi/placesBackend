@@ -53,17 +53,22 @@ server.use(expressRateLimit({ windowMs: 1000, max: 30, message:"Are you fucking 
 //     next();
 //   });
 
-server.use(cors({
-    "exposedHeaders" : "authorization",
-    "origin": "https://enchanting-croissant-483ce8.netlify.app",
-    "methods": 'GET,POST,PUT,DELETE',
-    "credentials":true
-}));
+// server.use(cors({
+//     "exposedHeaders" : "authorization",
+//     "origin": "https://enchanting-croissant-483ce8.netlify.app",
+//     "methods": 'GET,POST,PUT,DELETE',
+//     "credentials":true
+// }));
 // server.use(cors({
 //    origin: 'https://enchanting-croissant-483ce8.netlify.app',
 //    methods: ['GET', 'POST', 'PUT', 'DELETE'],
 //    allowedHeaders: ['Content-Type', 'authorization']
 //  }));
+
+const corsOptions = {
+    origin: '*',
+    exposedHeaders: "authorization"}
+    server.use(cors(corsOptions));
 
 
 server.use(fileUpload());
