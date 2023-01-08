@@ -7,9 +7,9 @@
   "description": "",
   "main": "server.ts",
   "scripts": {
-    "test": "jest --coverage",
-    "server": "nodemon --exec ts-node server.ts",
-    "start": "server start"
+    "start": "node build/index.js",
+    "build": "tsc",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "",
