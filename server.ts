@@ -68,7 +68,7 @@ server.use(expressRateLimit({ windowMs: 1000, max: 30, message:"Are you fucking 
 const corsOptions = {
     origin: '*',
     exposedHeaders: "authorization"}
-    server.use(cors(corsOptions));
+server.use(cors(corsOptions));
 
 
 server.use(fileUpload());
