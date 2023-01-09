@@ -5,11 +5,10 @@
     "node": "18.12.0"
   },
   "description": "",
-  "main": "server.ts",
+  "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "server": "nodemon --exec ts-node server.ts",
-    "start": "server start"
+    "start": "nodemon --exec ts-node index.ts"
   },
   "keywords": [],
   "author": "",
