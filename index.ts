@@ -7,7 +7,7 @@ import router from './Routes/controller';
 import fileUpload from "express-fileupload";
 import { createUser, createVication, createVicationFollowers } from "./Utils/init";
 import routerVication from "./Routes/controller_vications";
-import passport from "passport";
+// import passport from "passport";
 import routerLikes from "./Routes/controller_likes";
 // const helmet = require("helmet");
 const expressRateLimit = require("express-rate-limit");
