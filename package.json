@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "start": "node index.js",
+    "start": "node index.ts",
     "devStart":"nodemon --exec ts-node index.ts"
   },
   "keywords": [],
