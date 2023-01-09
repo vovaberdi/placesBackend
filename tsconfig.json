@@ -1,6 +1,17 @@
+
 {
     "compilerOptions": {
-        "target": "ES6",
-        "esModuleInterop": true
-    }
-}
+      "baseUrl": "./",
+      "module": "commonjs",
+      "outDir": "./dist",
+      "strict": true,
+      "target": "ES6",
+  
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "removeComments": true,
+    },
+    "include": [
+      "./index.ts"
+    ]
+  }
